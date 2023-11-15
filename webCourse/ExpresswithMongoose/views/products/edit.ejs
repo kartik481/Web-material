@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a product</title>
+</head>
+
+<body>
+    <h1>Enter a product:</h1>
+    <form action="/products/<%= product._id %>?_method=PUT" method="post">
+        <label for="name">Product name</label>
+        <input type="text" id="name" name="name" placeholder="Name" value="<%= product.name %>">
+        <label for="price"></label>
+        <input type="text" id="price" name="price" placeholder="price" value="<%= product.price %>">
+        <label for="category"> Select category</label>
+        <select name="category" id="category">
+            <option value="fruit" <%=product.category==='fruit' ? 'selected' :'' %>>fruit</option>
+            <option value="dairy" <%=product.category==='dairy' ? 'selected' :'' %>>dairy</option>
+            <option value="vegetable" <%=product.category==='vegetable' ? 'selected' :'' %>>vegetable</option>
+        </select>
+
+        <button>Submit</button>
+    </form>
+    <a href="/products">Back to all products!!</a>
+</body>
+
+</html>

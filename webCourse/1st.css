@@ -1,0 +1,68 @@
+h2 {
+    color: rebeccapurple;
+    border-width: 5px;
+    border-color: pink;
+}
+
+h1 {
+    color: darkgray;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    font-family: Arial, Helvetica, sans-serif;
+    border-width: 5px;
+    border-color: pink;
+    border-style: inset;
+    margin: 10px 10px;
+    resize: both;
+}
+
+#card {
+    height: 200;
+    width: 200;
+    align-items: center;
+    border-radius: 50%;
+}
+
+img {
+    height: 100;
+    width: 100;
+    border-radius: 50%;
+}
+
+button {
+    padding: 0 10px;
+}
+
+nav {
+    position: fixed;
+    background-color: black;
+    text-align: center;
+    color: whitesmoke;
+}
+
+nav:hover {
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#square {
+    margin: auto;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+    background-color: rgb(233, 150, 200, 0.5);
+    transition: all 2s ease-in;
+}
+
+
+#square:hover {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(100, 140, 190, 0.3);
+    transform: rotate(45deg);
+    margin: 10px;
+}

@@ -1,0 +1,35 @@
+h1 {
+    font-size: 80px;
+    text-align: center;
+    color: white;
+}
+
+img {
+    display: inline;
+    width: 30%;
+    height: 25em;
+    margin: 1.56%;
+    transition: all 0.2s;
+}
+
+img:hover {
+    transform: translate(-0.25em);
+    border-radius: 30%;
+    border: 0.5px solid black;
+}
+
+#card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav {
+    text-align: center;
+    color: aliceblue;
+    background-color: black;
+    position: sticky;
+    top: 20px;
+    padding: auto;
+    margin: auto;
+}

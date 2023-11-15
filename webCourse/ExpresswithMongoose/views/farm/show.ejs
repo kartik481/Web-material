@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= farm.name %>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= farm.name %>
+    </h1>
+    <li>City:<%= farm.city %>
+    </li>
+    <li>Email-id: <%= farm.email %>
+    </li>
+
+    <h1>Products in stock:</h1>
+    <ul>
+        <% if(farm.product.length==0) {%>
+            <h2>Currently stock is empty, Please visit later.</h2>
+            <% } else{ for(let prod of farm.product){%>
+                <li>
+                    <a href="/products/<%= prod._id %>">
+                        <%= prod.name %>
+                    </a>
+                </li>
+                <% }} %>
+    </ul>
+    <a href="/farm"> All farms</a>&nbsp;<a href="/farm/<%= farm._id %>/products/new"> Add a new Product</a>
+    <form action="/farm/<%= farm._id%>?_method=DELETE" method="post">
+        <button>DELETE</button>
+    </form>
+
+</body>
+
+</html>
